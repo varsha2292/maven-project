@@ -1,2 +1,2 @@
 <h1> Hello, !!! </h1>
-<h2> Deploying on Docker </h2>
+<h2> My First Maven Project </h2>
