@@ -3,23 +3,22 @@ pipeline {
     agent {
         node {
             label 'linux'
-            customWorkspace '/tmp/myefs/myworkspace/workspace/declarative_pipeline'
+            customWorkspace '/tmp/myefs/workspace/declarative_pipeline'
         }
     }
 
     environment {
-    Node_IP = "3.141.15.51"
+    Node_IP = "13.127.82.14"
     TEST = "radical"
-    arr = "[aamir, radical, jordan]"
-    hahahah = "Webhook created from pipline"
+    string = "Webhook created from pipline"
     }
 
     stages {
         stage('Git Checkout') {
-        steps {
-            git branch: 'dev-local-deploy',
-                credentialsId: 'git-https-creds',
-                url: 'https://gitlab.com/andromeda99/maven-project.git'
+            steps {
+                git branch: 'dev-local-deploy',
+                credentialsId: 'ssh-git',
+                url: 'https://gitlab.com/Bokya/maven-project.git'
             }
         }
         stage('Build') {
@@ -29,8 +28,7 @@ pipeline {
                         def test1 = "radical1"
                         echo "${TEST}"
                         echo "${test1}"
-                        echo "${arr}"
-                        echo "${hahahah}"
+                        echo "${string}"
                         
 
                         sh '/usr/local/src/apache-maven/bin/mvn clean install'
