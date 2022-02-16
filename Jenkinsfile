@@ -10,8 +10,7 @@ pipeline {
     environment {
     Node_IP = "3.141.15.51"
     TEST = "radical"
-    arr = "[aamir, radical, jordan]"
-    hahahah = "Webhook created from pipline"
+    string = "Webhook created from pipline"
     }
 
     stages {
@@ -29,8 +28,7 @@ pipeline {
                         def test1 = "radical1"
                         echo "${TEST}"
                         echo "${test1}"
-                        echo "${arr}"
-                        echo "${hahahah}"
+                        echo "${string}"
                         
 
                         sh '/usr/local/src/apache-maven/bin/mvn clean install'
