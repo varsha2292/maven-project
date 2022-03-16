@@ -3,12 +3,12 @@ pipeline {
     agent {
         node {
             label 'linux'
-            customWorkspace '/tmp/myefs/workspace/declarative_pipeline'
+            customWorkspace '/tmp/efs/workspace/new-pipeline'
         }
     }
 
     environment {
-    Node_IP = "13.127.82.14"
+    Node_IP = "65.0.29.18"
     TEST = "radical"
     string = "Webhook created from pipline"
     }
@@ -17,7 +17,7 @@ pipeline {
         stage('Git Checkout') {
             steps {
                 git branch: 'dev-local-deploy',
-                credentialsId: 'ssh-git',
+                credentialsId: 'git-cred-http',
                 url: 'https://gitlab.com/Bokya/maven-project.git'
             }
         }
