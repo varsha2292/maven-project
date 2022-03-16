@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:black;">
+<body style="background-color:blue;">
 <header><title>DevOps</title></header>
 <body>
 <br />
