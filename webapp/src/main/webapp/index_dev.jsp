@@ -9,7 +9,7 @@
 <br />
 
 <h1 style="color:white; font-family:verdana; text-align:center; font-size:400%">
-    <marquee behavior="alternate"> groovy declarative pipeline ...you are the queen babe ! on the rocks good going......! </h1></marquee>
+    <marquee behavior="alternate">!groovy declarative pipeline ...you are the queen babe ! on the rocks good going......! </h1></marquee>
 
 
 
