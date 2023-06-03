@@ -2,13 +2,13 @@ pipeline {
 
     agent {
         node {
-            label 'linux'
+            label 'master'
             //customWorkspace '/var/lib/jenkins/workspace/'
         }
     }
 
     environment {
-        Node_IP = "35.160.133.55"
+        Node_IP = "52.43.53.96"
         var1 = "Radical"
         string1 = "Webhook created from pipline job"
     }
@@ -18,8 +18,8 @@ pipeline {
         stage('Git Checkout') {
             steps {
                 git branch: 'dev-local-deploy',
-                    credentialsId: 'git-https-creds',
-                    url: 'https://gitlab.com/andromeda99/maven-project.git'
+                    credentialsId: 'mygit',
+                    url: 'https://gitlab.com/rutuja.jirapure/maven-project'
                 }
         }
 
