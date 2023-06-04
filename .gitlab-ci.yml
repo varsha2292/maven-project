@@ -51,9 +51,10 @@ deploy-job:      # This job runs in the deploy stage.
     - echo "Application successfully deployed."
 
 Testing-the-build:      # This job runs in the deploy stage.
-  stage: radical  # It only runs when *both* jobs in the test stage complete successfully.
+  stage: Testing-the-build  # It only runs when *both* jobs in the test stage complete successfully.
   environment: production
   script:
     - whoami
     - who
     - pwd
+    - ls -l
