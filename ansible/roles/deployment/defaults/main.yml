@@ -2,9 +2,9 @@
 # defaults file for myrole
 DockerHub_repo: "{{ lookup('env', 'DockerHub_repo') }}"
 VER: "{{ lookup('env', 'VER') }}"
-user: ec2-user
+user: "{{ lookup('env', 'aws_user') }}"
 WORKSPACE: "{{ lookup('env', 'WORKSPACE') }}"
 job: "{{ lookup('env', 'JOB') }}"
 namespace: "{{ lookup('env', 'namespace') }}"
 tag: "{{ lookup('env', 'tag') }}"
-region: us-east-2
+region: "{{ lookup('env', 'aws_region') }}" 

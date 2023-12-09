@@ -4,4 +4,4 @@ WORKSPACE: "{{ lookup('env', 'WORKSPACE') }}"
 job: "{{ lookup('env', 'JOB') }}"
 namespace: "{{ lookup('env', 'namespace') }}"
 tag: "{{ lookup('env', 'tag') }}"
-region: us-west-2
+region: "{{ lookup('env', 'aws_region') }}" 
