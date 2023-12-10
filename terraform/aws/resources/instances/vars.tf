@@ -38,7 +38,7 @@ variable "AWS_REGION" {
 variable "security-group" {
 	type = map(list(string))
 	default = {
-		"mysgG" = ["sg-0342ba743b97deee2"]
+		"mysg" = ["sg-0342ba743b97deee2"]
 		
 	}
 }
