@@ -16,7 +16,7 @@ pipeline {
         IMAGE = "radical-nov-dev-2023"
         VER = "${env.JOB_NAME}-${env.BUILD_ID}"
         DockerHub_repo = "aamirs/radical-private-repo"
-        bastion_ip = "192.168.1.131"
+        bastion_ip = "192.168.1.121"
         //bastion_ip = "192.168.1.94"
         JOB = "${env.JOB_NAME}"
         tag = "3.0.${env.BUILD_ID}"
