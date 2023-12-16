@@ -1,25 +1,25 @@
 variable "AWS_ACCESS_KEY" {
-	default = "AKIAZYNFTPBGDFVBM3MB"
+	default = "AKIA2RJEWVSXY23ANAFR"
 }
 
 variable "AWS_SECRET_KEY" {
-	default = "1250RJZp3TvPBPayY16RbXH6vjo3vzkeyOQZais9"
+	default = "nAPEfUyo53ty8jkNbsiYUuuMG8gCDCJd5HexHGFi"
 }
 
 variable "mykey" {
 	type = string
-	default = "demo"
+	default = "radicalsep2023"
 	
 }
 
 variable "subnet" {
-	default = "us-east-1b"
+	default = "us-west-2a"
 }
 
 variable "security-group" {
 	type = map(list(string))
 	default = {
-		"Demo-SG" = ["sg-0e9c8799152d2054a"]
+		"mysg" = ["sg-0342ba743b97deee2"]
 		
 	}
 }
@@ -39,14 +39,14 @@ variable "subnets" {
 
 
 variable "AWS_REGION" {
-  default = "us-east-1"
+  default = "us-west-2"
 }
 
 variable "AMIS" {
   type = map(string)
   default = {
     us-east-1 = "ami-00c6177f250e07ec1"
-    us-west-2 = "ami-0ac64ad8517166fb1"
+    us-west-2 = "ami-09100e341bda441c0"
     eu-west-1 = "ami-0d729a60"
     us-east-2 = "ami-0fa49cc9dc8d62c84"
   }
