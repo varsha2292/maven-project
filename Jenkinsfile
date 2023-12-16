@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         aws_user = "ec2-user"
-        //AWS_ACCESS_KEY_ID = credentials('myawscreds')
-        //AWS_SECRET_ACCESS_KEY = credentials('myawscreds')
+        AWS_ACCESS_KEY_ID = credentials('myawscreds')
+        AWS_SECRET_ACCESS_KEY = credentials('myawscreds')
         //JFrog_repo = "radicaloct2022weekday.jfrog.io"
         //JFrog_docker_folder = "radical-docker-local"
         //Jfrog_image = "radical-private-repo"
@@ -16,12 +16,12 @@ pipeline {
         IMAGE = "radical-nov-dev-2023"
         VER = "${env.JOB_NAME}-${env.BUILD_ID}"
         DockerHub_repo = "aamirs/radical-private-repo"
-        //bastion_ip = "192.168.1.111"
+        bastion_ip = "192.168.1.131"
         //bastion_ip = "192.168.1.94"
         JOB = "${env.JOB_NAME}"
         tag = "3.0.${env.BUILD_ID}"
-        //bastion_host = "radical-bastion"
-        bastion_host = "ansibleclient1"
+        bastion_host = "radical-bastion"
+        //bastion_host = "ansibleclient1"
         
     }
 
@@ -76,7 +76,7 @@ pipeline {
         }
 
         // CD(Continuous Deployment) starts Here ... !!!
-        /*stage('Deploying IAC(Infrastructure as a code) on AWS via Terraform') {
+        stage('Deploying IAC(Infrastructure as a code) on AWS via Terraform') {
             steps {
                 script {
                     sh "pwd"
@@ -89,9 +89,9 @@ pipeline {
                       
                 }
             }
-        }*/
+        }
 
-        /*stage('Configuring Bastion as an Ansible Host') {
+        stage('Configuring Bastion as an Ansible Host') {
             steps {
                 script {
                     
@@ -101,13 +101,13 @@ pipeline {
                       
                 }
             }
-        }*/
+        }
 
-        /*stage('Deployment - Sanity test on Radical-bastion VM using Docker') {
+        stage('Deployment - Sanity test on Radical-bastion VM using Docker') {
             steps {
                sh 'ansible-playbook ansible/deployment-sanity-test.yml'
             }
-        }*/
+        }
 
         /*stage('Cleanup of containers on ansibleclient1') {
             steps {
