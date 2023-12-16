@@ -32,8 +32,8 @@ variable "keyPath" {
 variable "subnets" {
 	type = map(string)
 	default = {
-		us-east-1b = "subnet-063341b49a740071e"
-		us-east-1a = "subnet-0f99e739329404012"
+		us-west-2a = "subnet-0656b8e19940c8b8f"
+		us-west-2b = "subnet-0a5bad7d52c80e5f5"
 	}
 }
 
