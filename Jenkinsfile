@@ -76,7 +76,7 @@ pipeline {
         }
 
         // CD(Continuous Deployment) starts Here ... !!!
-        stage('Deploying IAC(Infrastructure as a code) on AWS via Terraform') {
+        /*stage('Deploying IAC(Infrastructure as a code) on AWS via Terraform') {
             steps {
                 script {
                     sh "pwd"
@@ -109,7 +109,7 @@ pipeline {
             }
         }
 
-        /*stage('Cleanup of containers on ansibleclient1') {
+        stage('Cleanup of containers on ansibleclient1') {
             steps {
 
                sh 'ansible-playbook ansible/cleanup.yml'
