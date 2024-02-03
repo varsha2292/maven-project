@@ -21,11 +21,11 @@
   </modules>
 
   <distributionManagement>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>a0nfjcj8g0fmr-artifactory-primary-0-snapshots</name>
-        <url>https://radicaloct2022weekday.jfrog.io/artifactory/radical-libs-snapshot-local</url>
-    </snapshotRepository>
+    <repository>
+        <id>central</id>
+        <name>a0sxkekhjs7p8-artifactory-primary-0-releases</name>
+        <url>https://radicaldec2023weekend.jfrog.io/artifactory/radical-maven-libs-release</url>
+    </repository>
   </distributionManagement>
 
   <build>
