@@ -22,9 +22,9 @@ sudo systemctl start httpd
 
 sudo systemctl enable httpd 
 
-sudo rsync -avt ${WORKSPACE}/webapp/target/webapp/* /var/www/html
+sudo rsync -avt webapp/target/webapp/* /var/www/html
 
-sudo rsync -avt ${WORKSPACE}/webapp/target/webapp.war /var/www/html
+sudo rsync -avt webapp/target/webapp.war /var/www/html
 
 sudo yum install elinks -y
 
