@@ -12,7 +12,7 @@ echo "Static Code Testing initiated"
 
 echo "Static code analyser - Sonarqube Scan running"
 
-sudo /opt/sonar-scanner-4.0.0.1744-linux/bin/sonar-scanner Dsonar.projectKey=webapp -Dsonar.sources=webapp -Dsonar.host.url=https://server.sonarqube.com:9090 -Dsonar.login=myAuthenticationToken 
+#sudo /opt/sonar-scanner-4.0.0.1744-linux/bin/sonar-scanner Dsonar.projectKey=webapp -Dsonar.sources=webapp -Dsonar.host.url=https://server.sonarqube.com:9090 -Dsonar.login=myAuthenticationToken 
 
 echo "Scanning completed."
 
@@ -31,3 +31,5 @@ sudo yum install elinks -y
 #Replace localhost with your Jenkins Master or Slave Public/Private IP as per your requirement. 
 
 elinks http://localhost
+
+curl -kv http://localhost
