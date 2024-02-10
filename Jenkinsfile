@@ -72,7 +72,7 @@ pipeline {
                 script {
                     try {
                     
-                        sh '/usr/local/src/apache-maven/bin/mvn clean deploy -s .m2/settings.xml'
+                        sh '/usr/local/src/apache-maven/bin/mvn clean install -s .m2/settings.xml'
                         
 
                     } catch (Exception e) {
@@ -116,10 +116,10 @@ pipeline {
         
                         //sh 'curl -X PUT -u radicalsep2023weekend@gmail.com:cmVmdGtuOjAxOjE3Mjg3OTczMTk6RFNUYUxMN1BkQ053TDBJRUdBUktCWGVGblZH -T .m2/settings.xml https://radicalseptember2023.jfrog.io/artifactory/libs-snapshot-local/com/radical/sept/maven-project/3.0-SNAPSHOT/settings-${ENV}-${TIER}.xml'
 
-                        //sh 'curl -X PUT -u radicalsep2023weekend@gmail.com:cmVmdGtuOjAxOjE3Mjg3OTczMTk6RFNUYUxMN1BkQ053TDBJRUdBUktCWGVGblZH -T .m2/settings.xml https://radicalseptember2023.jfrog.io/artifactory/libs-snapshot-local/com/radical/sept/maven-project/3.0-SNAPSHOT/settings.xml'
+                        sh 'curl -X PUT -u radicaldec2023weekend@gmail.com:cmVmdGtuOjAxOjE3Mzg0ODE0MjM6RTdMVGh6TXV4cnlIUnBBdGxtV1pVYXVWSkxB -T .m2/settings.xml https://radicaldec2023weekend.jfrog.io/artifactory/radical-maven-libs-snapshot/com/radical/jan-2024/maven-project/1.0-SNAPSHOT/settings.xml'
 
                     } catch (Exception e) {
-                        echo "Exception received " + e.toString()
+                        echo "Exception received " + e.toString() 
                         sh 'exit 1'
                     }
                 }
