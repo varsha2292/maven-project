@@ -32,7 +32,7 @@ pipeline {
                        echo "${BUILD_DISPLAY_NAME}"
                        echo "${WORKSPACE}"
                        echo "${JOB_NAME}"
-                       echo "${JENKINS_HOME1}"
+                       echo "${JENKINS_HOME}"
 
                     } catch (Exception e) {
                         echo "Exception received because of --- " + e.toString()
@@ -116,7 +116,7 @@ pipeline {
         
                         //sh 'curl -X PUT -u radicalsep2023weekend@gmail.com:cmVmdGtuOjAxOjE3Mjg3OTczMTk6RFNUYUxMN1BkQ053TDBJRUdBUktCWGVGblZH -T .m2/settings.xml https://radicalseptember2023.jfrog.io/artifactory/libs-snapshot-local/com/radical/sept/maven-project/3.0-SNAPSHOT/settings-${ENV}-${TIER}.xml'
 
-                        sh 'curl -X PUT -u radicalsep2023weekend@gmail.com:cmVmdGtuOjAxOjE3Mjg3OTczMTk6RFNUYUxMN1BkQ053TDBJRUdBUktCWGVGblZH -T .m2/settings.xml https://radicalseptember2023.jfrog.io/artifactory/libs-snapshot-local/com/radical/sept/maven-project/3.0-SNAPSHOT/settings.xml'
+                        //sh 'curl -X PUT -u radicalsep2023weekend@gmail.com:cmVmdGtuOjAxOjE3Mjg3OTczMTk6RFNUYUxMN1BkQ053TDBJRUdBUktCWGVGblZH -T .m2/settings.xml https://radicalseptember2023.jfrog.io/artifactory/libs-snapshot-local/com/radical/sept/maven-project/3.0-SNAPSHOT/settings.xml'
 
                     } catch (Exception e) {
                         echo "Exception received " + e.toString()
