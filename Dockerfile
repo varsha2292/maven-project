@@ -8,23 +8,25 @@ RUN yum install httpd -y
 
 RUN yum install git -y
 
+RUN yum install elinks -y
+
 RUN groupadd -g $gid -r $user && useradd -u $uid -g $gid -r -m -d /home/$user -g $user $user
 
 ADD https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz /home/$user
 
-RUN touch index.php
+RUN pwd
 
-RUN echo "Hello Radical" >> /home/$user/index.php
+RUN ls -la
+
+ADD radical.tar.gz /tmp
+
+COPY webapp/* /var/www/html/
 
 RUN chown -R $user:$user /home/$user/
 
 RUN chmod -R 755 /home/$user
 
-#COPY /var/tmp/index.html /tmp
-
-COPY webapp/target/webapp.war /var/www/html/
-
-COPY webapp/target/webapp /var/www/html/
+#COPY webapp/target/webapp /var/www/html/
 
 #USER $user
 
@@ -38,5 +40,3 @@ EXPOSE 80
 
 CMD ["-D", "FOREGROUND"]
 ENTRYPOINT ["/usr/sbin/httpd"]
-
-
