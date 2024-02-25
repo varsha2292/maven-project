@@ -36,9 +36,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'echo ${image_name}'
-                sh "sudo docker build -t $image_name:$docker_tag . --build-arg user=${Docker_user}"
-                sh 'sudo docker images'
+                scripts {
+                    dir('docker') { 
+                        sh 'echo ${image_name}'
+                        sh "sudo docker build -t $image_name:$docker_tag . --build-arg user=${Docker_user}"
+                        sh 'sudo docker images'
+                    }
+                }
             }
         }
 
@@ -79,7 +83,7 @@ pipeline {
                         sh "curl -kv http://$Jenkins_IP:300${BUILD_NUMBER}/index_dev.jsp"
                         sh "elinks http://$Jenkins_IP:300${BUILD_NUMBER}/index_dev.jsp"
                         sh "elinks http://$Jenkins_IP:300${BUILD_NUMBER}/index.html"
-                        
+
                     } catch (e) {
                        //Below exit 0 will continue even if the stage fails or the exit code of the command is not equal to zero
                        echo "Please check the IP of your build server --- " + e.toString()
