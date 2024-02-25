@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         def image_name="radical-dec-2023"
-        def docker_tag="radical-dec-2023-v1.0"
+        def docker_tag="radical-dec-2023-v2.0"
         def Jenkins_IP="54.149.96.92" // This should be your jenkins slave IP
         def DOCKER_NETWORK="dev"
         def DOCKER_SUBNET="172.31.0.0/24"
