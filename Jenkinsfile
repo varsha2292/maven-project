@@ -36,7 +36,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                scripts {
+                script {
                     dir('docker') { 
                         sh 'echo ${image_name}'
                         sh "sudo docker build -t $image_name:$docker_tag . --build-arg user=${Docker_user}"
