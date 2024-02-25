@@ -20,7 +20,7 @@ RUN ls -la
 
 ADD radical.tar.gz /tmp
 
-COPY webapp/* /var/www/html/
+COPY ../webapp/* /var/www/html/
 
 RUN chown -R $user:$user /home/$user/
 
