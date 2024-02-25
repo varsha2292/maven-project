@@ -33,6 +33,13 @@ pipeline {
             }
         }*/
 
+        stage('Creating Docker Volume for containers') {
+            steps {
+                sh 'ls -la'
+                sh 'sudo cp -rf ${WORKSPACE}/webapp/target/webapp docker'
+            }
+        }
+
 
         stage('Build Docker Image') {
             steps {
