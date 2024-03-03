@@ -101,7 +101,7 @@ pipeline {
                       
                 }
             }
-        }
+        }*/
 
         stage('Deployment - Sanity test on Radical-bastion VM using Docker') {
             steps {
@@ -109,15 +109,15 @@ pipeline {
             }
         }
 
-        stage('Cleanup of containers on ansibleclient1') {
+        /*stage('Cleanup of containers on ansibleclient1') {
             steps {
 
                sh 'ansible-playbook ansible/cleanup.yml'
                
             }
-        }*/
+        }
 
-        /*stage('Deployment on AWS EKS(Elastic Kubernetes Service)') {
+        stage('Deployment on AWS EKS(Elastic Kubernetes Service)') {
             steps {
                 sh 'ansible-playbook ansible/roles/bastion-provision/bastion-provision.yml --vault-password-file  pass.txt'
             }
