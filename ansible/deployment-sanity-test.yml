@@ -22,12 +22,12 @@
     run_once: yes
 
   - name: Installing Docker
-    dnf:
+    yum:
       name: docker
       state: present
 
   - name: Installing Git
-    dnf:
+    yum:
       name: git
       state: present
 
@@ -47,7 +47,7 @@
       dest: /home/ec2-user/docker_token.yml
 
   - name: Installing pip
-    dnf:
+    yum:
       name: pip
       state: present
 
