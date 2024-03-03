@@ -14,6 +14,8 @@
     WORKSPACE: "{{ lookup('env', 'WORKSPACE') }}"
     DockerHub_repo: "{{ lookup('env', 'DockerHub_repo') }}"
     VER: "{{ lookup('env', 'VER') }}"
+    my_docker_network: "{{ lookup('env', 'my_docker_network') }}"
+    my_docker_network_ip_range: "{{ lookup('env', 'my_docker_network_ip_range') }}"
 
   tasks:
   - name: set fact here
