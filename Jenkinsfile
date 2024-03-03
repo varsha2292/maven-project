@@ -22,7 +22,7 @@ pipeline {
         tag = "1.0.${env.BUILD_ID}"
         //bastion_host = "radical-bastion"
         bastion_host = "ansibleclient1"
-        my_network = "uat"
+        my_docker_network = "uat"
         my_docker_network_ip_range = "172.31.0.0/24"
 
         
