@@ -41,6 +41,12 @@
       name: docker
       enabled: yes
 
+  - name: Create a Docker Network
+    docker_network:
+      name: {{ my_network }}
+      ipam_config:
+      - subnet: {{ my_docker_network_ip_range }}
+
   - name: Ansible copy file to remote server
     copy:
       src: "{{ WORKSPACE }}/ansible/docker_token.yml"
@@ -65,9 +71,9 @@
   - name: Creating test container
     command: "{{ item }}"
     with_items:
-    - docker run -itd  --name=test_machine320"{{ random_number }}" centos
+    #- docker run -itd  --name=test_machine320"{{ random_number }}" centos
     #- docker run -itd --name=webserver320"{{ random_number }}" -p 320"{{ random_number }}":80 -v "{{ vol }}":/var/www/html/  {{ DockerHub_repo }}:{{ VER}}
-    - docker run -itd --name=webserverpreprod320"{{ random_number }}" -p 320"{{ random_number }}":80  {{ DockerHub_repo }}:{{ VER}}
+    - docker run -itd --restart=always --network={{ my_network }} --name=webserverpreprod320"{{ random_number }}" -p 320"{{ random_number }}":80  {{ DockerHub_repo }}:{{ VER}}
     register: shell_result
   - debug:
       var: shell_result
