@@ -25,7 +25,7 @@ pipeline {
         my_docker_network = "uat"
         my_docker_network_ip_range = "172.31.0.0/24"
 
-        
+    
     }
 
     
