@@ -45,7 +45,7 @@
     docker_network:
       name: "{{ my_docker_network }}"
       ipam_config:
-      - subnet: "{{ my_docker_network_ip_range }}"
+        - subnet: "{{ my_docker_network_ip_range }}"
 
   - name: Ansible copy file to remote server
     copy:
