@@ -2,7 +2,7 @@ pipeline {
     agent {label 'master'}
 
     environment {
-        //aws_user = "ec2-user"
+        aws_user = "ec2-user"
         //AWS_ACCESS_KEY_ID = credentials('myawscreds')
         //AWS_SECRET_ACCESS_KEY = credentials('myawscreds')
         //JFrog_repo = "radicaloct2022weekday.jfrog.io"
@@ -12,7 +12,7 @@ pipeline {
         //bastion_ip = "10.0.2.111"
         //namespace = "prod"
         //eks_cluster = "myeks"
-        //aws_region="us-west-2"
+        aws_region="us-west-2"
         IMAGE = "radical-dec-dev-2023"
         VER = "${env.JOB_NAME}-${env.BUILD_ID}"
         DockerHub_repo = "aamirs/radical-private-repo"
@@ -104,7 +104,7 @@ pipeline {
                       
                 }
             }
-        }*/
+        }
 
         stage('Deployment - Sanity test on Radical-bastion VM using Docker') {
             steps {
@@ -112,19 +112,19 @@ pipeline {
             }
         }
 
-        /*stage('Cleanup of containers on ansibleclient1') {
+        stage('Cleanup of containers on ansibleclient1') {
             steps {
 
                sh 'ansible-playbook ansible/cleanup.yml'
                
             }
-        }
+        }*/
 
         stage('Deployment on AWS EKS(Elastic Kubernetes Service)') {
             steps {
                 sh 'ansible-playbook ansible/roles/bastion-provision/bastion-provision.yml --vault-password-file  pass.txt'
             }
-        }*/
+        }
     }
     
     post {
