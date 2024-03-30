@@ -17,7 +17,7 @@ variable "keyPath" {
 }
 
 variable "subnet" {
-	default = "us-west-2b"
+	default = "us-west-2a"
 }
 
 variable "subnets" {
