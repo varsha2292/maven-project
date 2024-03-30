@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.radical.jan-2024</groupId>
+    <groupId>com.radical.feb-2024</groupId>
     <artifactId>maven-project</artifactId>
     <version>1.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
