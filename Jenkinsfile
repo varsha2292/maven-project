@@ -12,16 +12,16 @@ pipeline {
         //bastion_ip = "10.0.2.111"
         aws_region="us-west-2"
         eks_cluster = "myeks"
-        namespace = "uat"
+        namespace = "dev"
         IMAGE = "radical-dec-dev-2023"
         VER = "${env.JOB_NAME}-${env.BUILD_ID}"
         DockerHub_repo = "aamirs/radical-private-repo"
         bastion_ip = "192.168.3.221"
-        //bastion_ip = "192.168.1.94"
+        bastion_ip = "192.168.1.94"
         JOB = "${env.JOB_NAME}"
         tag = "1.0.${env.BUILD_ID}"
-        //bastion_host = "radical-bastion"
-        bastion_host = "ansibleclient1"
+        bastion_host = "radical-bastion"
+        //bastion_host = "ansibleclient1"
         my_docker_network = "prod"
         my_docker_network_ip_range = "172.168.0.0/24"
 
@@ -79,7 +79,7 @@ pipeline {
         }
 
         // CD(Continuous Deployment) starts Here ... !!!
-        /*stage('Deploying IAC(Infrastructure as a code) on AWS via Terraform') {
+        stage('Deploying IAC(Infrastructure as a code) on AWS via Terraform') {
             steps {
                 script {
                     sh "pwd"
@@ -106,7 +106,7 @@ pipeline {
             }
         }
 
-        stage('Deployment - Sanity test on Radical-bastion VM using Docker') {
+        /*stage('Deployment - Sanity test on Radical-bastion VM using Docker') {
             steps {
                sh 'ansible-playbook ansible/deployment-sanity-test.yml'
             }
