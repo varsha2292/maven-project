@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         aws_user = "ec2-user"
-        //AWS_ACCESS_KEY_ID = credentials('myawscreds')
-        //AWS_SECRET_ACCESS_KEY = credentials('myawscreds')
+        AWS_ACCESS_KEY_ID = credentials('myawscreds')
+        AWS_SECRET_ACCESS_KEY = credentials('myawscreds')
         //JFrog_repo = "radicaloct2022weekday.jfrog.io"
         //JFrog_docker_folder = "radical-docker-local"
         //Jfrog_image = "radical-private-repo"
@@ -12,7 +12,7 @@ pipeline {
         //bastion_ip = "10.0.2.111"
         aws_region="us-west-2"
         eks_cluster = "myeks"
-        namespace = "dev"
+        namespace = "uat"
         IMAGE = "radical-dec-dev-2023"
         VER = "${env.JOB_NAME}-${env.BUILD_ID}"
         DockerHub_repo = "aamirs/radical-private-repo"
