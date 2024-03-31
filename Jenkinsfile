@@ -33,7 +33,7 @@ pipeline {
         stage('Git Checkout') {
             steps {
                 script{
-                    checkout([$class: 'GitSCM', branches: [[name: "refs/tags/radical-jan-2023-rel-2.0"]], userRemoteConfigs: [[credentialsId: "git-https-creds", url: "https://gitlab.com/andromeda99/maven-project.git"]]])
+                    checkout([$class: 'GitSCM', branches: [[name: "refs/tags/radicalfeb2024-releaseVer-1.0"]], userRemoteConfigs: [[credentialsId: "git-https-creds", url: "https://gitlab.com/andromeda99/maven-project.git"]]])
                 }
                 }
         }
