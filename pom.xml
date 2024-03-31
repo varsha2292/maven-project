@@ -23,8 +23,8 @@
   <distributionManagement>
     <snapshotRepository>
         <id>snapshots</id>
-        <name>a0sxkekhjs7p8-artifactory-primary-0-snapshots</name>
-        <url>https://radicaldec2023weekend.jfrog.io/artifactory/radical-maven-libs-snapshot</url>
+        <name>a0gxqg6ndrd8s-artifactory-primary-0-snapshots</name>
+        <url>https://radicalfeb2024.jfrog.io/artifactory/radicalfeb2024-libs-snapshot</url>
     </snapshotRepository>
   </distributionManagement>
 
