@@ -9,7 +9,7 @@ pipeline {
     
     environment {
         //Node_IP = "34.222.99.250"
-        var1 = "Radical"
+        var1 = "Radicalfeb2024"
         string1 = "Webhook created from pipline job"
         ENV = "dev"
     }
@@ -67,7 +67,7 @@ pipeline {
                 }
         }
 
-        stage('Build') {
+        /*stage('Build') {
             steps {
                 script {
                     try {
@@ -145,7 +145,7 @@ pipeline {
                 }
 
             }
-        }
+        }*/
 
     }
 
