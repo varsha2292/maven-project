@@ -90,7 +90,7 @@ pipeline {
             }
         }
 
-        /*stage('Unit Testing') {
+        stage('Unit Testing') {
             steps {
                 script {
                     try {
@@ -116,9 +116,7 @@ pipeline {
         
                         //sh 'curl -X PUT -u radicalsep2023weekend@gmail.com:cmVmdGtuOjAxOjE3Mjg3OTczMTk6RFNUYUxMN1BkQ053TDBJRUdBUktCWGVGblZH -T .m2/settings.xml https://radicalseptember2023.jfrog.io/artifactory/libs-snapshot-local/com/radical/sept/maven-project/3.0-SNAPSHOT/settings-${ENV}-${TIER}.xml'
 
-                        sh 'curl -X PUT -u radicaldec2023weekend@gmail.com:cmVmdGtuOjAxOjE3Mzg0ODE0MjM6RTdMVGh6TXV4cnlIUnBBdGxtV1pVYXVWSkxB -T unit-test.sh https://radicaldec2023weekend.jfrog.io/artifactory/radical-maven-libs-snapshot/com/radical/jan-2024/maven-project/1.0-SNAPSHOT/unit-test.sh'
-
-                        sh '/usr/local/src/apache-maven/bin/mvn clean deploy -s .m2/settings.xml'
+                        sh 'curl -X PUT -u jordandcasanova99@gmail.com:cmVmdGtuOjAxOjE3NDM0MDIxMzg6Tmdja3d4YnBZeGoyUnBSYnB6Q0NtZTBEQTBX -T unit-test.sh https://radicalfeb2024.jfrog.io/artifactory/radicalfeb2024-libs-snapshot/com/radical/march2024/maven-project/2.0-SNAPSHOT/myfiles/unit-test.sh'
 
                     } catch (Exception e) {
                         echo "Exception received " + e.toString() 
@@ -145,7 +143,7 @@ pipeline {
                 }
 
             }
-        }*/
+        }
 
     }
 
