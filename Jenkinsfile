@@ -68,13 +68,12 @@ pipeline {
                 }
         }
 
-        /*stage('Build') {
+        stage('Build') {
             steps {
                 script {
                     try {
                     
-                        sh '/usr/local/src/apache-maven/bin/mvn clean install -s .m2/settings.xml'
-                        
+                        sh '/usr/local/src/apache-maven/bin/mvn clean install -s .m2/settings.xml'                       
 
                     } catch (Exception e) {
                         echo "Exception received because of --- " + e.toString()
@@ -85,7 +84,7 @@ pipeline {
             }
         }
 
-        stage('Scanning') {
+        /*stage('Scanning') {
             steps {
                 echo 'Scanning in progress.'
             }
