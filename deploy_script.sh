@@ -1,6 +1,6 @@
 #/bin/bash
 
-export Node_IP="Node_IP"
+export Node_IP="env.Node_IP"
 
 sudo env
 
