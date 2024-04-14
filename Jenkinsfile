@@ -71,7 +71,7 @@ pipeline {
                 script {
                     try {
                     
-                        sh '/usr/local/src/apache-maven/bin/mvn clean install -s .m2/settings.xml'                       
+                        sh '/usr/local/src/apache-maven/bin/mvn clean ${maven_goal} -s .m2/settings.xml'                       
 
                     } catch (Exception e) {
                         echo "Exception received because of --- " + e.toString()
@@ -114,7 +114,7 @@ pipeline {
         
                         //sh 'curl -X PUT -u radicalsep2023weekend@gmail.com:cmVmdGtuOjAxOjE3Mjg3OTczMTk6RFNUYUxMN1BkQ053TDBJRUdBUktCWGVGblZH -T .m2/settings.xml https://radicalseptember2023.jfrog.io/artifactory/libs-snapshot-local/com/radical/sept/maven-project/3.0-SNAPSHOT/settings-${ENV}-${TIER}.xml'
 
-                        sh 'curl -X PUT -u jordandcasanova99@gmail.com:cmVmdGtuOjAxOjE3NDM0MDIxMzg6Tmdja3d4YnBZeGoyUnBSYnB6Q0NtZTBEQTBX -T unit-test.sh https://radicalfeb2024.jfrog.io/artifactory/radicalfeb2024-libs-snapshot/com/radical/march2024/maven-project/2.0-SNAPSHOT/myfiles/unit-test.sh'
+                        sh 'curl -X PUT -u jordandcasanova99@gmail.com:${jfrog-creds} -T unit-test.sh ${jfrog-url}/com/radical/march2024/maven-project/2.0-SNAPSHOT/myfiles/unit-test.sh'
 
                     } catch (Exception e) {
                         echo "Exception received " + e.toString() 
@@ -127,7 +127,8 @@ pipeline {
         stage('Deployment') {
             steps {
                 script {
-                    echo 'Deployment..'
+                    sh 'sudo sh deploy_script.sh'
+                    /*echo 'Deployment..'
                     sh 'sudo yum install httpd -y'
                     sh 'sudo yum install elinks -y'
                     sh 'sudo systemctl start httpd'
@@ -137,7 +138,7 @@ pipeline {
                     sh 'sudo elinks  http://${Node_IP}/webapp/'
                     sh 'sudo elinks  http://${Node_IP}/webapp/index_dev.jsp'
                     sh 'sudo elinks  http://${Node_IP}/webapp/index.html'
-                    sh 'sudo curl -kv http://${Node_IP}/webapp/index_dev.jsp'
+                    sh 'sudo curl -kv http://${Node_IP}/webapp/index_dev.jsp'*/
                 }
 
             }
