@@ -114,7 +114,10 @@ pipeline {
         
                         //sh 'curl -X PUT -u radicalsep2023weekend@gmail.com:cmVmdGtuOjAxOjE3Mjg3OTczMTk6RFNUYUxMN1BkQ053TDBJRUdBUktCWGVGblZH -T .m2/settings.xml https://radicalseptember2023.jfrog.io/artifactory/libs-snapshot-local/com/radical/sept/maven-project/3.0-SNAPSHOT/settings-${ENV}-${TIER}.xml'
 
-                        sh 'curl -X PUT -u jordandcasanova99@gmail.com:"${jfrog-creds}" -T unit-test.sh ${jfrog-url}/com/radical/march2024/maven-project/2.0-SNAPSHOT/myfiles/unit-test.sh'
+
+                        echo "${jfrogcreds}"
+                        echo "${jfrogurl}"
+                        sh 'curl -X PUT -u jordandcasanova99@gmail.com:"${jfrogcreds}" -T unit-test.sh "${jfrogurl}"/com/radical/march2024/maven-project/2.0-SNAPSHOT/myfiles/unit-test.sh'
 
                     } catch (Exception e) {
                         echo "Exception received " + e.toString() 
