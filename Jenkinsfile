@@ -56,7 +56,7 @@ pipeline {
                         echo "${Node_IP}"
                         echo "${ENV}"
                         echo "${environment}"
-                        echo "${scanning:completed:}"
+                        
 
                     } catch (Exception e) {
                         echo "Exception received because of --- " + e.toString()
