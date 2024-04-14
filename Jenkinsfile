@@ -84,13 +84,13 @@ pipeline {
             }
         }
 
-        /*stage('Scanning') {
+        stage('Scanning') {
             steps {
                 echo 'Scanning in progress.'
             }
         }
 
-        stage('Unit Testing') {
+        /*stage('Unit Testing') {
             steps {
                 script {
                     try {
