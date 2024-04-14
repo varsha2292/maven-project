@@ -1,5 +1,11 @@
 #/bin/bash
 
+export Node_IP="Node_IP"
+
+sudo env
+
+echo $Node_IP
+
 echo 'Deployment..'
 sudo yum install httpd -y
 sudo yum install elinks -y
