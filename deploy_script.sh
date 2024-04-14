@@ -1,10 +1,6 @@
 #/bin/bash
 
-export Node_IP="env.Node_IP"
-
-sudo env
-
-echo $Node_IP
+echo $1
 
 echo 'Deployment..'
 sudo yum install httpd -y
@@ -13,7 +9,7 @@ sudo systemctl start httpd
 sudo systemctl enable httpd
 sudo rm -rf /var/www/html/*
 sudo rsync -avt webapp/target/webapp /var/www/html
-sudo elinks  http://${Node_IP}/webapp/
-sudo elinks  http://${Node_IP}/webapp/index_dev.jsp
-sudo elinks  http://${Node_IP}/webapp/index.html
-sudo curl -kv http://${Node_IP}/webapp/index_dev.jsp
+sudo elinks  http://$1/webapp/
+sudo elinks  http://$1/webapp/index_dev.jsp
+sudo elinks  http://$1/webapp/index.html
+sudo curl -kv http://$1/webapp/index_dev.jsp

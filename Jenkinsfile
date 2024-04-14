@@ -130,7 +130,7 @@ pipeline {
         stage('Deployment') {
             steps {
                 script {
-                    sh 'sudo sh deploy_script.sh'
+                    sh 'sudo sh deploy_script.sh ${params.Node_IP}'
                     /*echo 'Deployment..'
                     sh 'sudo yum install httpd -y'
                     sh 'sudo yum install elinks -y'
