@@ -9,7 +9,7 @@ pipeline {
         def DOCKER_SUBNET="10.10.1.0/24"
         def DOCKERHUB = credentials('DOCKERHUB_CREDS')
         DockerHub_repo = "aamirs/radical-private-repo"
-        Docker_user = "radicaldec2023"
+        Docker_user = "radicalfeb2024"
         Docker_vol = "my_vol"
     }
     
