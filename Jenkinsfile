@@ -2,10 +2,10 @@ pipeline {
     agent {label 'master'}
 
     environment {
-        def image_name="radical-dec-2023"
-        def docker_tag="radical-dec-2023-v2.0"
-        def Jenkins_IP="35.92.98.203" // This should be your jenkins slave IP
-        def DOCKER_NETWORK="prod"
+        def image_name="radical-feb-2024"
+        def docker_tag="radical-feb-2024-v1.0"
+        def Jenkins_IP="35.94.203.76" // This should be your jenkins slave IP
+        def DOCKER_NETWORK="dev"
         def DOCKER_SUBNET="10.10.1.0/24"
         def DOCKERHUB = credentials('DOCKERHUB_CREDS')
         DockerHub_repo = "aamirs/radical-private-repo"
