@@ -12,7 +12,7 @@ pipeline {
         //bastion_ip = "10.0.2.111"
         aws_region="us-west-2"
         eks_cluster = "myeks"
-        namespace = "uat"
+        namespace = "dev"
         IMAGE = "radical-feb-dev-2024"
         VER = "${env.JOB_NAME}-${env.BUILD_ID}"
         DockerHub_repo = "aamirs/radical-private-repo"
