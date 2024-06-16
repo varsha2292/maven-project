@@ -8,7 +8,7 @@ variable "AWS_SECRET_KEY" {
 
 variable "mykey" {
 	type = string
-	default = "radicalfeb2024"
+	default = "radicalfeb2024ohio"
 	
 }
 
@@ -32,7 +32,7 @@ variable "subnets" {
 
 
 variable "AWS_REGION" {
-  default = "us-west-2"
+  default = "us-east-2"
 }
 
 variable "security-group" {
