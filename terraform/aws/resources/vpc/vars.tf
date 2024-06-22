@@ -3,7 +3,7 @@ variable "AWS_ACCESS_KEY" {
 }
 
 variable "AWS_SECRET_KEY" {
-	default = "HPyHrp6n0O8fm1ZtCR+gNLY7lBVYAoInSc676F29"
+	default = "p61Rr4WRyqQzKuyxjQe4PZWw51JS4TuislI49HEy"
 }
 
 variable "vpc_cidr" {
@@ -33,7 +33,7 @@ variable "public_subnet_4" {
 
 variable "mykey" {
 	type = string
-	default = "radicaldec2023"
+	default = "radical-2024-terraform"
 }
 
 variable "keyPath" {
@@ -65,7 +65,7 @@ variable "AMIS" {
   type = map(string)
   default = {
     us-east-1 = "ami-13be557e"
-    us-west-2 = "ami-00112c992a47ba871"
+    us-west-2 = "ami-0a283ac1aafe112d5"
     eu-west-1 = "ami-0d729a60"
 	us-east-2 = "ami-0fa49cc9dc8d62c84"
   }
