@@ -1,14 +1,14 @@
 variable "AWS_ACCESS_KEY" {
-	default = "AKIA2SHC63XI45JA4LNT"
+	default = "AKIAZI2LCO2TWPNXUHX7"
 }
 
 variable "AWS_SECRET_KEY" {
-	default = "edqTkHypELMwiGHH8kseYJbpyP0+UtGs8qCniOvc"
+	default = "p61Rr4WRyqQzKuyxjQe4PZWw51JS4TuislI49HEy"
 }
 
 variable "mykey" {
 	type = string
-	default = "radicalfeb2024ohio"
+	default = "radical-demo-key"
 	
 }
 
@@ -32,7 +32,7 @@ variable "subnets" {
 
 
 variable "AWS_REGION" {
-  default = "us-east-2"
+  default = "us-west-2"
 }
 
 variable "security-group" {
