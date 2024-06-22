@@ -1,5 +1,5 @@
 variable "AWS_ACCESS_KEY" {
-	default = "AKIA23DKME3MZ3VOHR5G"
+	default = "AKIAZI2LCO2TWPNXUHX7"
 }
 
 variable "AWS_SECRET_KEY" {
