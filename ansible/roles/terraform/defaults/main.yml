@@ -4,7 +4,9 @@
 namespace: "{{ lookup('env', 'namespace') }}"
 tag: "{{ lookup('env', 'tag') }}"
 user: "{{ lookup('env', 'aws_user') }}"
+jenkins_user: "{{ lookup('env', 'jenkins_user') }}"
 WORKSPACE: "{{ lookup('env', 'WORKSPACE') }}"
+jenkins_workspace: "{{ lookup('env', 'jenkins_workspace') }}"
 bastion_host: "{{ lookup('env', 'bastion_host') }}"
 job: "{{ lookup('env', 'JOB') }}"
 aws_access_key_id: !vault |

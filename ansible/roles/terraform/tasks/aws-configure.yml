@@ -2,9 +2,9 @@
  - name: copy credentials file to bastion
    template: 
       src: credentials.j2 
-      dest: /home/{{ user }}/.aws/credentials
-      owner: "{{ user }}"
-      group: "{{ user }}"
+      dest: "{{ jenkins_workspace }}"/.aws/credentials
+      owner: "{{ jenkins_user }}"
+      group: "{{ jenkins_user }}"
       mode: 0600
    register: shell_result
  - debug:
@@ -13,9 +13,9 @@
  - name: copy credentials file to bastion
    template:
       src: config.j2
-      dest: /home/{{ user }}/.aws/config
-      owner: "{{ user }}"
-      group: "{{ user }}"
+      dest: "{{ jenkins_workspace }}"/.aws/config
+      owner: "{{ jenkins_user }}"
+      group: "{{ jenkins_user }}"
       mode: 0600
    register: shell_result
  - debug:

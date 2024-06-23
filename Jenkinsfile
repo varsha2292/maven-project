@@ -3,6 +3,8 @@ pipeline {
 
     environment {
         aws_user = "ec2-user"
+        jenkins_user = "jenkins"
+        jenkins_workspace = "/var/lib/jenkins"
         //AWS_ACCESS_KEY_ID = credentials('myawscreds')
         //AWS_SECRET_ACCESS_KEY = credentials('myawscreds')
         //JFrog_repo = "radicaloct2022weekday.jfrog.io"

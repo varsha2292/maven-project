@@ -1,0 +1,17 @@
+---
+- name: checking pwd
+  shell: pwd
+  register: shell_result
+- debug:
+      var: shell_result
+
+- name: ansible create directory example
+  file:
+    path: "{{ jenkins_workspace }}"/.aws
+    state: directory
+    mode: "u=rwx,g=rwx,o=rx"
+    owner: "{{ jenkins_user }}"
+    group: "{{ jenkins_user }}"
+  register: shell_result
+- debug:
+      var: shell_result
