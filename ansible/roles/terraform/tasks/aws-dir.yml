@@ -7,7 +7,7 @@
 
 - name: ansible create directory example
   file:
-    path: "{{ jenkins_workspace }}"/.aws
+    path: /{{ jenkins_workspace }}/.aws
     state: directory
     mode: "u=rwx,g=rwx,o=rx"
     owner: "{{ jenkins_user }}"
