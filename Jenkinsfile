@@ -17,11 +17,11 @@ pipeline {
         VER = "${env.JOB_NAME}-${env.BUILD_ID}"
         DockerHub_repo = "aamirs/radical-private-repo"
         //bastion_ip = "192.168.3.221"
-        bastion_ip = "192.168.1.94"
+        bastion_ip = "172.31.2.231"
         JOB = "${env.JOB_NAME}"
         tag = "1.0.${env.BUILD_ID}"
-        //bastion_host = "radical-bastion"
-        bastion_host = "ansibleclient1"
+        bastion_host = "radical-bastion"
+        //bastion_host = "ansibleclient1"
         my_docker_network = "uat"
         my_docker_network_ip_range = "10.10.0.0/24"
 
@@ -95,7 +95,7 @@ pipeline {
             }
         }*/
 
-        /*stage('Configuring Bastion as an Ansible Host') {
+        stage('Configuring Bastion as an Ansible Host') {
             steps {
                 script {
                     
@@ -105,7 +105,7 @@ pipeline {
                       
                 }
             }
-        }*/
+        }
 
         /*stage('Deployment - Sanity test on Radical-bastion VM using Docker') {
             steps {
