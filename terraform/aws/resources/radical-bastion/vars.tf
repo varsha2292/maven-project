@@ -1,14 +1,14 @@
 variable "AWS_ACCESS_KEY" {
-	default = "AKIA23DKME3MZ3VOHR5G"
+	default = "AKIAZI2LCO2TWPNXUHX7"
 }
 
 variable "AWS_SECRET_KEY" {
-	default = "HPyHrp6n0O8fm1ZtCR+gNLY7lBVYAoInSc676F29"
+	default = "p61Rr4WRyqQzKuyxjQe4PZWw51JS4TuislI49HEy"
 }
 
 variable "mykey" {
 	type = string
-	default = "radicaldec2023"
+	default = "radical-2024-terraform"
 	
 }
 
@@ -17,7 +17,7 @@ variable "keyPath" {
 }
 
 variable "subnet" {
-	default = "us-west-2a"
+	default = "us-west-2c"
 }
 
 variable "subnets" {
@@ -25,7 +25,7 @@ variable "subnets" {
 	default = {
 		us-west-2a = "subnet-099e7de53fcebf8da"
         us-west-2b = "subnet-0a8c1504f09e1828f"
-        us-west-2c = "subnet-04518523cc7b9dcf9"
+        us-west-2c = "subnet-060abf5f641446c3e"
         us-west-2d = "subnet-01095ab50bf229d74"
 	}
 }
@@ -38,7 +38,7 @@ variable "AWS_REGION" {
 variable "security-group" {
 	type = map(list(string))
 	default = {
-		"mysg" = ["sg-0469f3af6e8d9926a"]
+		"mysg" = ["sg-023ad60d422521051"]
 		
 	}
 }
@@ -47,7 +47,7 @@ variable "AMIS" {
   type = map(string)
   default = {
     us-east-1 = "ami-13be557e"
-    us-west-2 = "ami-00112c992a47ba871"
+    us-west-2 = "ami-0a283ac1aafe112d5"
     eu-west-1 = "ami-0d729a60"
 	us-east-2 = "ami-0fa49cc9dc8d62c84"
   }
