@@ -1,5 +1,5 @@
 ---
- - name: copy credentials file to bastion
+ - name: copy credentials file under jenkins user home dir
    template: 
       src: credentials.j2 
       dest: /{{ jenkins_workspace }}/.aws/credentials
@@ -10,7 +10,7 @@
  - debug:
     var: shell_result
 
- - name: copy credentials file to bastion
+ - name: copy credentials file under jenkins user home dir
    template:
       src: config.j2
       dest: /{{ jenkins_workspace }}/.aws/config
