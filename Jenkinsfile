@@ -91,7 +91,7 @@ pipeline {
 
                     echo "Terraform is launching the bastion VM"
 
-                    sh 'ansible-playbook ansible/roles/terraform/terraform.yml'
+                    sh 'ansible-playbook ansible/roles/terraform/terraform.yml --vault-password-file  pass.txt'
                       
                 }
             }
